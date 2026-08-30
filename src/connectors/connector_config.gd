@@ -7,6 +7,10 @@ var casino_settle_path: String = "/api/casino/settle"
 var hope_path: String = "/api/hope"
 var vote_path: String = "/api/vote"
 var secret_path: String = "/api/secret"
+var persist_path: String = "/api/persist"
+var nakama_path: String = "/api/nakama"
+var supabase_path: String = "/api/supabase"
+var health_path: String = "/api/health"
 
 func _ready() -> void:
 	for arg in OS.get_cmdline_args():

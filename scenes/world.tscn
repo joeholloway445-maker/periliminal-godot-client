@@ -63,4 +63,4 @@ offset_left = 16.0
 offset_top = 52.0
 offset_right = 900.0
 offset_bottom = 120.0
-text = "WASD move  E use door/cabinet  C casino ticket  H help deed  G attack deed  V story vote  1-6 force layer  ESC mouse"
+text = "WASD move  click strike/talk  E door  C casino  H help  V vote  N city  P persist  CTRL crouch  1-6 layer  ESC mouse"
