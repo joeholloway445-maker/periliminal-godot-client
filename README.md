@@ -1,50 +1,38 @@
 # Periliminal Godot Client
 
-Standalone Godot **4.3+** client for Periliminal.Space. Not the 324MB monorepo.
+Standalone Godot **4.3+** client for Periliminal.Space.
 
-Open `project.godot` in Godot 4.3 or 4.7. Press F5.
+Open `project.godot` in Godot 4.3 or 4.7. Press F5. Green = Debugger → Errors has **zero SCRIPT ERROR**.
 
-## What this client is
+Repo: https://github.com/joeholloway445-maker/periliminal-godot-client
 
-- Projector body: sex × 20 races × 20 frames × 20 mods (`OmniDexTables.combo_count()` = 16000)
-- Six layers with AGENTS.md rules (Periliminal only via Liminal pull or dev key 6)
-- Six currencies on `Wallet`
-- HOPE speaks. KNOLL never speaks.
-- Consistency meter drives Periliminal difficulty
-- Entity party 0–3, capture on attack
-- Casino: chips leave the engine via `CasinoBridge` ticket. No in-engine payout RNG
-- Story vote + HOPE telemetry HTTP connectors
-- HDV handoff args `--player-id=` `--return-to=`
+## Spine
+
+boot wizard → six layers → world movement → combat/capture → NPCs/word-of-mouth → always-on HOPE → silent KNOLL → consistency → doors → Recall Walk body memory → local + bridge persistence
+
+- Projector: sex × 20 races × 20 frames × 20 mods = **16,000** compositions (`OmniDexTables.compose`). No 16k scenes.
+- Six currencies: coins, chips, fragments, tokens, charges, prestige.
+- Periliminal entry is Liminal pull or dev key 6. No countdown.
+- Superliminal hidden door has no mesh.
+- Casino chips leave the engine on `POST /api/casino/ticket`. Settlement is web-only.
+
+## Connectors
+
+Default base `https://periliminal-rebuild-slice.vercel.app` (override `--bridge=` or `user://bridge.json`).
+
+| Autoload | Route |
+|---|---|
+| CasinoBridge | POST /api/casino/ticket, /api/casino/settle |
+| HopeBridge | POST /api/hope |
+| VoteBridge | POST /api/vote |
+| SecretBridge | POST /api/secret |
+| PersistBridge | POST /api/persist |
+| NakamaBridge | POST /api/nakama |
+| SupabaseBridge | POST /api/supabase |
+| Handoff | `--player-id=` `--return-to=` |
 
 ## Keys
 
-- WASD move, mouse look, E use
-- 1–6 force layer (dev)
-- C casino ticket (Hyperliminal, or force with 4 then C)
-- H help deed / G attack deed
-- V story vote
-- ESC frees mouse
+WASD move, mouse look, click strike or talk, E door/cabinet, C casino ticket, H help deed, V vote, N cycle DFW city, P persist snapshot, CTRL crouch, 1–6 force layer, ESC mouse.
 
-## Bridge
-
-Default base: `https://periliminal-rebuild-slice.vercel.app`
-
-Override:
-
-```
-godot -- --bridge=https://your-host
-```
-
-or `user://bridge.json` → `{ "bridge_base": "https://..." }`
-
-Routes the client posts:
-
-- `POST /api/casino/ticket`
-- `POST /api/casino/settle`
-- `POST /api/hope`
-- `POST /api/vote`
-- `POST /api/secret`
-
-## Green
-
-Debugger → Errors = 0 SCRIPT ERROR after import. That is green. Then F5.
+Blessing door in Periliminal returns to Subliminal and banks prestige.
