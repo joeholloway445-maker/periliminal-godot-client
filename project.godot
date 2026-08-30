@@ -1,0 +1,34 @@
+; Periliminal.Space — standalone Godot 4.3 client
+; Open THIS file in Godot 4.3+. Do not open the 324MB monorepo first.
+config_version=5
+
+[application]
+config/name="Periliminal Client"
+config/description="Six-layer XRMMORPG client. Casino gambling settles off-engine."
+config/version="0.2.0"
+run/main_scene="res://scenes/boot.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+ConnectorConfig="*res://src/connectors/connector_config.gd"
+Wallet="*res://src/core/economy_wallet.gd"
+Session="*res://src/core/game_session.gd"
+Hope="*res://src/core/hope_companion.gd"
+Knoll="*res://src/core/knoll_auditor.gd"
+Consistency="*res://src/core/consistency_meter.gd"
+Party="*res://src/core/entity_party.gd"
+LayerRouter="*res://src/layers/layer_router.gd"
+CasinoBridge="*res://src/connectors/casino_bridge.gd"
+HopeBridge="*res://src/connectors/hope_telemetry.gd"
+VoteBridge="*res://src/connectors/story_vote_bridge.gd"
+Handoff="*res://src/connectors/external_handoff.gd"
+
+[display]
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
+[rendering]
+renderer/rendering_method="forward_plus"
+environment/defaults/default_clear_color=Color(0.04, 0.045, 0.06, 1)
